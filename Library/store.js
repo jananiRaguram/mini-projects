@@ -9,10 +9,10 @@ function Book(title, author, numPgs, haveRead){
 
 Book.prototype.info = function(){
         
-    if(haveRead == false){
-        return(title + " by " + author + ", " + numPgs + " pages, not read yet.");
+    if(this.haveRead == false){
+        return(this.title + "By " + this.author + "\nPgs" + this.numPgs + "\nnot read yet.");
     }else{
-        return(title + " by " + author + ", " + numPgs + " pages, already read.");
+        return(this.title + "\nBy " + this.author + "\nPgs" + this.numPgs + "\nalready read.");
 
     }
 }
@@ -20,6 +20,14 @@ Book.prototype.info = function(){
 function addToLibrary(title, author, numPgs, haveRead){
     let newBook = new Book(title, author, numPgs, haveRead);
     mylibrary.push(newBook);
+    console.log(newBook.info());
+
+    //show in browser
+    let bookshelf = document.createElement("p");
+    let bookDesc = document.createTextNode(newBook.info());
+    bookshelf.appendChild(bookDesc);
+    let myBookshelf = document.getElementById("myLibrary");
+    myBookshelf.appendChild(bookshelf);
 }
 
 function inLibrary(){
@@ -41,4 +49,6 @@ function inputBookInfo(){
     let numPgs = document.getElementById("numPgs").value
     let hasRead = document.getElementById("hasRead").checked;
     addToLibrary(title, author, numPgs, hasRead);
+
 }
+
