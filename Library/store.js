@@ -55,7 +55,7 @@ $(document).ready(function(){
         let numPgs = document.getElementById("numPgs").value
         let hasRead = document.getElementById("hasRead").checked;
         addToLibrary(title, author, numPgs, hasRead);
-    
+        document.getElementById("form").style.display = "none";
     });
     
     

@@ -1,4 +1,42 @@
 .form-popup{
     display: none;
+    text-align: center;
+    background-color:#FB9D9D;
+    padding: 10px 10px 20px 10px;
+    margin: 150px 600px 10px 600px;
+    border-radius: 30px;
+}
+
+input{
+    line-height: 20px;
+    outline: none;
+    border-radius: 8px;
+}
+
+#titleInput{
+    margin-left: 15px;
+}
+
+#bookAuthor{
+    text-align: center;
+}
+
+#pgCount{
+    margin-left: -6px;
+    /* text-align: center; */
+}
+
+
+form div{
+    margin-right: 40px;
+}
+
+#readStatus{
+    margin-left: 50px;
+}
+
+#inputBookInfo{
+    padding: 2px 15px 2px 15px;
+    margin-left: 45px;
 }
 

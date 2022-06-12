@@ -12,25 +12,36 @@
     <button id="addInfo">Add Book</button>
     <div class="form-popup" id="form">
         <form>
-            <h1>Add Book</h1>
-            <label for="bookTitle">Title</label>
-            <input type="text" id="title">
-            <br>
-
-            <label for="bookAuthor">Author</label>
-            <input type="text" id="author">
-            <br>
-
-            <label for="bookPgs">Number of Pages</label>
-            <input type="text" id="numPgs">
-            <br>
-
-            <label for="hasRead">Already Read?</label>
-            <input type="checkbox" id="hasRead">
-            <br>
-
-            <button type="button" id="inputBookInfo">Submit</button>
-        </form>
+                <h1>Book Info</h1>
+                <div id="titleInput">
+                    <label for="bookTitle">Title</label>
+                    <input type="text" id="title">
+                    <br><br>
+                </div>
+            
+                <div id="bookAuthor">
+                    <label for="bookAuthor">Author</label>
+                    <input type="text" id="author">
+                    <br><br>
+                </div>
+                
+                <div id="pgCount">
+                    <label for="bookPgs"># of Pgs</label>
+                    <input type="text" id="numPgs">
+                    <br><br>
+                </div>
+                
+                <div id="readStatus">
+                    <label for="hasRead">Already Read?</label>
+                    <input type="checkbox" id="hasRead">
+                    <br><br>
+    
+                </div>
+               
+                <div id="submit">
+                    <button type="button" id="inputBookInfo">Submit</button>
+                </div>
+            </form>
     </div>
 
     <div id="myLibrary"></div>
