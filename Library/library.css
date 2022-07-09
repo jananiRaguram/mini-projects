@@ -1,10 +1,40 @@
-.form-popup{
-    display: none;
+.form-sideNav{
+    position: fixed;
+    right: 0px;
     text-align: center;
     background-color:#FB9D9D;
-    padding: 10px 10px 20px 10px;
-    margin: 150px 600px 10px 600px;
+    top: 0px;
+    height: 100%;
+    bottom: 0px;
+  
+}
+form div{
+    margin: 0px 20px 0px 80px;
+}
+
+form h1{
+    margin-left: 35px;
+}
+
+#books{
+    position: absolute;
+}
+
+table{
+    padding-left: 50px;
+    border-spacing: 40px;
+    margin-right: 300px;
+}
+
+td{
+    padding: 30px 100px 30px 0px;
+    background-color: #FB9D9D;
     border-radius: 30px;
+}
+
+#bookshelf h1{
+    text-align: center;
+    margin-right: 350px;
 }
 
 input{
@@ -18,18 +48,16 @@ input{
 }
 
 #bookAuthor{
-    text-align: center;
+    margin-right: 100px ;
 }
 
 #pgCount{
-    margin-left: -6px;
+    margin-left: -12px;
     /* text-align: center; */
 }
 
 
-form div{
-    margin-right: 40px;
-}
+
 
 #readStatus{
     margin-left: 50px;
@@ -37,6 +65,18 @@ form div{
 
 #inputBookInfo{
     padding: 2px 15px 2px 15px;
+}
+
+#submit{
     margin-left: 45px;
 }
 
+ul{
+    text-align: left;
+    display: inline-block;
+}
+
+li{
+    list-style-type: none;
+    padding: 2px;
+}

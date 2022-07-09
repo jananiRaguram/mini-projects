@@ -6,13 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="library.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<link rel="stylesheet" href="library.css">
+
+
 <body>
-    <button id="addInfo">Add Book</button>
-    <div class="form-popup" id="form">
+
+    <div id="bookshelf">
+        <h1>My Bookshelf</h1>
+        <div>
+            <table  id="table"></table>
+        </div>
+    </div>
+    
+
+    <div class="form-sideNav" id="form">
         <form>
-                <h1>Book Info</h1>
+                <h1>Book Details</h1>
                 <div id="titleInput">
                     <label for="bookTitle">Title</label>
                     <input type="text" id="title">
@@ -39,12 +50,12 @@
                 </div>
                
                 <div id="submit">
-                    <button type="button" id="inputBookInfo">Submit</button>
+                    <button type="button" id="inputBookInfo">Add to Library</button>
                 </div>
             </form>
     </div>
-
-    <div id="myLibrary"></div>
+    
+    
 
     <script src="store.js"></script>
 </body>
