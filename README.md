@@ -1,2 +1,2 @@
-# git_test
-hello odin
+# Projects done through theodinproject
+https://www.theodinproject.com/
