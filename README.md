@@ -1,2 +1,2 @@
-# Projects done through theodinproject
+# Projects done using The Odin Project as a guide
 https://www.theodinproject.com/
