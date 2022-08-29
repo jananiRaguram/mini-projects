@@ -46,12 +46,12 @@ $(document).ready(function(){
 
         //author
         details = document.createElement('li');
-        details.textContent = author;
+        details.textContent = 'by ' + author;
         bookDetails.appendChild(details);
 
         //numpg
         details = document.createElement('li');
-        details.textContent = numPgs;
+        details.textContent = numPgs + ' pgs';
         bookDetails.appendChild(details);
 
         //has read or not
@@ -67,22 +67,44 @@ $(document).ready(function(){
     
     
     $('#inputBookInfo').on('click',function (e){
-        // let title = document.getElementById("title").value;
-        // let author = document.getElementById("author").value;
-        // let numPgs = document.getElementById("numPgs").value
-        // let hasRead = document.getElementById("hasRead").checked;
-        let title = "rt";
-        let author = "rt";
-        let numPgs = "90";
-        let hasRead = true;
+        let title = document.getElementById("title").value;
+        let author = document.getElementById("author").value;
+        let numPgs = document.getElementById("numPgs").value
+        let hasRead = document.getElementById("hasRead").checked;
+
+        let formCheck = document.getElementById("formCheck");
+     
         if(hasRead == true){
             hasRead = "Already Read";
         }else{
             hasRead = "TBR";
         }
-        console.log(mylibrary);
-        addToLibrary(title, author, numPgs, hasRead);
-        // document.getElementById("form").style.visibility = "hidden";
+
+        if(title == ""){
+            let titleInput = document.getElementById("titleInput");
+            titleInput.style.color = "red";
+        }
+
+        if(author == ""){
+            let bookAuthor = document.getElementById("bookAuthor");
+            bookAuthor.style.color = "red";
+        }
+        
+        //show error message to user
+        if(author == "" || title == ""){
+            formCheck.style.visibility = "visible";
+            formCheck.style.color = "red";
+        }else{
+            console.log(mylibrary);
+            addToLibrary(title, author, numPgs, hasRead);
+            formCheck.style.visibility = "hidden";
+            titleInput.style.color = "black";
+            bookAuthor.style.color = "black";
+
+            //clear form
+            document.getElementById("formDetails").reset();
+        }
+
     });
     
     
